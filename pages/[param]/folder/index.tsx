@@ -12,9 +12,15 @@ import {
   RequestMeta,
 } from "next/dist/server/request-meta";
 
+type IProps = {
+  resolvedUrl: string;
+  rewroteUrl: string;
+  nextDidRewrite: boolean;
+};
+
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home(props) {
+export default function Home(props: IProps) {
   const router = useRouter();
   return (
     <>
